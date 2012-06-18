@@ -1,4 +1,5 @@
 <?php
+
 include 'header.php';
 
 $name = $_POST['nickname'];
@@ -12,11 +13,11 @@ if(!preg_match($nameRegEx, $name) || $nameFieldLength < 3 || $passwordLength < 3
 	header("Location: settingsLogin.php?loginError=userNotFound");
 else
 {
-	if ( strlen($name) )
+	if (strlen($name))
 	{
-		if( check_login($name, $pw) )
+		if(check_user($name, $pw))
 		{
-			$_SESSION[ 'USER' ] = $name;
+			$_SESSION['USER'] = $name;
 			header("Location: index.php");
 			exit;
 		}
@@ -27,13 +28,13 @@ else
 		header("Location: settingsLogin.php?loginError=emptyUsername");
 }
 
-function check_login( $u, $p )
+function check_user($u, $p)
 {
-	include 'header.php';
+	global $connect;
 
 	$sql = "SELECT COUNT(*)
-			FROM fhs_members fmem
-			WHERE fmem.nme=? AND fmem.pw=?";
+			FROM fhs_members
+			WHERE nme = ? AND pw = ?";
 	$stmt = $connect -> prepare($sql);
 	$stmt -> bind_param('ss', $u, $p);
 	$stmt -> execute();
@@ -46,4 +47,5 @@ function check_login( $u, $p )
 	else
 		return true;
 }
+
 ?>

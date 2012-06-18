@@ -1,12 +1,15 @@
 <?php
+
 include 'header.php';
 
 $title = '<h1>Login</h1>';
 
 if($_GET['loginError'] == 'userNotFound')
 	$content = '<p id="missingFieldMsg">Falscher Username oder Passwort</p>';
+	
 else if($_GET['loginError'] == 'emptyUsername')
 	$content = '<p id="missingFieldMsg">Bitte Usernamen und Passwort angeben</p>';
+
 else
 	$content = '<p id="missingFieldMsg"></p>';
 
