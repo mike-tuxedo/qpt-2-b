@@ -35,7 +35,7 @@
      */
     body{
         margin: 0;
-        background-color: #f4f4f5;
+        background: url('../images/reticular_background.png');
         font-family: QuorumStdMedium;
         font-size: 14.5px;
     }
@@ -77,18 +77,19 @@
 	}
 	
 	#back{
-        width: 52px;
+        width: 20px;
         height: 50px;
-        float: left;
+        position: absolute;
+        left: 8px;
 	}
 	
 	#logo{
-	    height: 50px;
-        width: 164px;
-        position: absolute;
-        margin-left: 50%;
-        left: -100px;
-
+		height: 30px;
+    width: 163px;
+    position: absolute;
+    margin-left: 50%;
+    left: -81px;
+    top: 7px;
 	}
 	
 	.showSettings{
