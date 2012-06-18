@@ -1,15 +1,17 @@
 <?php
+
 include 'header.php';
 
 $title = '<h1>Signup</h1>';
 
 if($_GET['regisError'] == 'alreadyInUse')
 	$content = '<p id="missingFieldMsg">User oder Email wird schon benutzt</p>';
+	
 else if($_GET['regisError'] == 'wrongValues')
 	$content = '<p id="missingFieldMsg">Die Angaben enthalten nicht erlaubte Zeichen</p>';
+
 else
 	$content = '<p id="missingFieldMsg"></p>';
-
 
 $content .= '<form id="signUp" action="signup.php" method="POST">
 				<ul>
@@ -32,4 +34,5 @@ $content .= '<form id="signUp" action="signup.php" method="POST">
 			</form>';
 
 include 'footer.php';
+
 ?>

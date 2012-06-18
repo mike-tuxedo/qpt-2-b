@@ -9,10 +9,10 @@ $sql = "SELECT id, nme
 		FROM article 
 		WHERE articleStatusID = '".$articleStatus."' 
 			AND (nme LIKE ? OR barcode LIKE ?) 
-		LIMIT 0, 10";
+		LIMIT 0, 5";
 
 $stmt = $connect -> prepare($sql);
-$stmt -> bind_param('s', $requestCharacter);
+$stmt -> bind_param('ss', $requestCharacter, $requestCharacter);
 $stmt -> execute();
 $stmt -> bind_result($articleID, $articleName);
 

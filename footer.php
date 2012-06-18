@@ -1,13 +1,10 @@
 <?php
-// show no back-button at homescreen
+
+// show not working back-button at homescreen
 if(preg_match('/.php/i', $_SERVER['REQUEST_URI']))
-{
     $navigationHeader = '<ul><li id="back"><a id="link_back" href="javascript:history.back()"><img src="images/back.png" alt="back" /></a></li>';
-}
 else
-{
-    $navigationHeader = '<ul>';
-}
+    $navigationHeader = '<ul><li id="back"><img src="images/back.png" alt="back" /></li>';
 
 $navigationHeader .= '
                 <li><a href="./"><img id="logo" src="images/logo.png" /></a></li>
@@ -28,10 +25,10 @@ $template->replace("TITLE", $title);
 $template->replace("CONTENT", $content);
 $template->replace("SEARCHFIELD", $searchField);
 $template->replace("GREETING", $greeting);
-//$template->replace("AUTOCOMPLETE_ARRAY", $autocompleteArray);
 
 ##############
 # Publizieren
 ##############
 $template->parse();
+
 ?>

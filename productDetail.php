@@ -27,24 +27,21 @@ $stmt -> close();
 $sql = "SELECT 
 			a.nme, a.brand, a.pricefrom, a.substancedeclaredtxt, 
 			ast.gpSort, 
-			c.nme, c.infoGMO, cl.nme, cl.note_public,  
-			t.nme, t.countrycode
+			c.nme, c.infoGMO, cl.nme, cl.note_public
 		FROM 
 			articleStatus ast, 
 			company c, 
-			territory t, 
 			article a
 		LEFT JOIN company cl ON a.producerid = cl.id
 		WHERE 
 			a.id = ? 
 			AND a.articleStatusID = ast.statusID 
-			AND a.salescompanyid = c.id 
-			AND a.territoryid = t.id";
+			AND a.salescompanyid = c.id";
 
 $stmt = $connect -> prepare($sql);
 $stmt -> bind_param('i', $articleID);
 $stmt -> execute();
-$stmt -> bind_result($articleName, $articleBrand, $articlePrice, $articleSubstance, $articleStatus, $companyName, $companyInfoGMO, $manufacturerName, $manufacturerNote, $territoryName, $territoryCountryCode);
+$stmt -> bind_result($articleName, $articleBrand, $articlePrice, $articleSubstance, $articleStatus, $companyName, $companyInfoGMO, $manufacturerName, $manufacturerNote);
 $stmt -> fetch();
 $stmt -> close();
 
@@ -55,11 +52,15 @@ $content .= '
 	
 	<div id="productDetailHeader">
 		<span>
-			<a id="addProduct" href="addRemoveProduct.php?product='.$articleName.'&action=add" id="addToBasket"><img src="images/addProduct.png" alt="zur Einkaufliste"/></a>
-			<p>Marke: '.utf8_encode($brand).'</p>
-			<p>Preis: '.$articlePrice.'</p>
-			<p>territory: '.$territoryName.', '.$territoryCountryCode.'</p>
-			<p>';
+			<a id="addProduct" href="addRemoveProduct.php?product='.$articleName.'&action=add" id="addToBasket"><img src="images/addProduct.png" alt="zur Einkaufliste"/></a>';
+			
+			if(!empty($brand))
+				$content .= '<p>Marke: '.utf8_encode($brand).'</p>';
+				
+			if(!empty($articlePrice))
+				$content .= '<p>'.$articlePrice.' EUR</p>';	
+			
+			$content .= '<p>';
 			
 			// calculate valuation of each class
 			foreach($valuationID as $key => $value)
