@@ -20,7 +20,7 @@ else
 
 $searchField = '
     <form action="searchRequest.php" method="GET">
-	   <input id="searchField" class="autocomplete" name="searchStr" type="text" placeholder="Gib ein Produkt ein" onkeyup="doAutocomplete(this.value);"/>
+	   <input id="searchField" class="autocomplete" name="searchStr" type="text" placeholder="Gib ein Produkt ein" onkeyup="doAutocomplete(this.value);" autocomplete="off" />
 	   <input id="submit" type="submit" value="" name="go" />
 
         <div id="autocompleteBox" style="display: none;">

@@ -21,6 +21,10 @@ function selectValue(value) {
 
 $(document).ready(function() { 
 	
+	// IPHONE SEARCHFIELD
+	if(navigator.userAgent.match(/iPhone/i))
+		$('#autocompleteBox ').css("margin-top", "40px");
+	
 	// CHECKLOGINVALUES
 	$('#loginForm').submit(function(){
 		var nameFieldLength = $('#nickname').val().length;
