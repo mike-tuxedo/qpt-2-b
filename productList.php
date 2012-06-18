@@ -3,7 +3,7 @@
 include 'header.php';
 include 'configParameter.php';
 
-$title = "<h1>ProductList</h1>";
+$title = "<h1>Produktliste</h1>";
 
 $categoryID = $_GET['cid'];
 $searchStr = preg_replace('/ |-|_|\+/', '%', '%'.$_GET['sstr'].'%');

@@ -58,7 +58,7 @@ $content .= '
 				$content .= '<p>Marke: '.utf8_encode($brand).'</p>';
 				
 			if(!empty($articlePrice))
-				$content .= '<p>Preis: '.$articlePrice.' EUR</p>';	
+				$content .= '<p align="right">EUR '.$articlePrice.'</p>';	
 			
 			$content .= '<p>';
 			

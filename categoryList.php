@@ -15,7 +15,7 @@ $stmt -> bind_result($articleType);
 $stmt -> fetch();
 $stmt -> close();
 
-$title = '<h1>Kategorie - '.utf8_encode($articleType).'</h1>';
+$title = '<h1>'.utf8_encode($articleType).'</h1>';
 
 // show all categories in this articletype
 $sql = "SELECT DISTINCT
