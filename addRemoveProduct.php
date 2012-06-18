@@ -1,4 +1,5 @@
 <?php
+
 include 'header.php';
 
 $articleName = $_GET['product'];
@@ -8,7 +9,7 @@ if($_SESSION[ 'USER' ])
 {
     $user = $_SESSION[ 'USER' ];
     //take all the products in the basket from a specific user
-    $stmt = $connect -> prepare("SELECT product FROM fhs_baskets fb WHERE fb.usernme = ?");
+    $stmt = $connect -> prepare("SELECT product FROM fhs_baskets WHERE usernme = ?");
     $stmt -> bind_param('s', $user);
     $stmt -> execute();
     $stmt -> bind_result($products);
@@ -31,5 +32,7 @@ if($_SESSION[ 'USER' ])
     $stmt2 -> execute();
     $stmt2 -> close();
 }
+
 header("Location:shoppingList.php");
+
 ?>

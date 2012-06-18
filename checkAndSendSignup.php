@@ -1,4 +1,5 @@
 <?php
+
 include 'header.php';
 
 $name = $_POST['nickname'];
@@ -17,8 +18,8 @@ else
 {
     //check if username or email already exists
     $sql = "SELECT COUNT(*)
-            FROM fhs_members fmem
-            WHERE fmem.nme LIKE ? || fmem.email LIKE ?";
+            FROM fhs_members
+            WHERE nme LIKE ? || email LIKE ?";
 
     $stmt = $connect -> prepare($sql);
     $stmt -> bind_param('ss', $name, $email);
@@ -37,4 +38,5 @@ else
         header("Location: index.php");
     }
 }
+
 ?>

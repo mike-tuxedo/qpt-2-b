@@ -1,4 +1,5 @@
 <?php
+
 include 'header.php';
 include 'configParameter.php';
 include 'checkGETParams.php';
@@ -52,15 +53,16 @@ while($stmt -> fetch())
     $stmt2 -> close();
 
     if($numberOfArticles > 0)
-    {
         $content .= '
             <li id="categoryListNavigation">
                 <a href="productList.php?cid='.$categoryID.'" title="'.utf8_encode($categoryName).'">'.utf8_encode($categoryName).' <span id="productCount"> ('.$numberOfArticles.')</span></a>
             </li>';
-    }
 }
+
 $content .= '</ul>';
+
 $stmt -> close();
 
 include 'footer.php';
+
 ?>

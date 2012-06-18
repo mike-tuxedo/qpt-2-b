@@ -13,9 +13,9 @@ $(document).ready(function() {
     });
 
 	//show and hide Login or Logoutoption
-    var session ="<?php echo $_SESSION[ 'USER' ] ?>";
+    var session = "<?php echo $_SESSION['USER']; ?>";
 
-    if(session)
+    if(session == "")
     {
         $('#loginEntrie').hide();
         $('#logoutEntrie').show();
