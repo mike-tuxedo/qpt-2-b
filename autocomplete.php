@@ -12,7 +12,7 @@ $sql = "SELECT id, nme
 		LIMIT 0, 10";
 
 $stmt = $connect -> prepare($sql);
-$stmt -> bind_param('s', $requestCharacter);
+$stmt -> bind_param('ss', $requestCharacter, $requestCharacter);
 $stmt -> execute();
 $stmt -> bind_result($articleID, $articleName);
 
