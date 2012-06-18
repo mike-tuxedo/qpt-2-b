@@ -56,13 +56,8 @@ while($stmt -> fetch())
 	$stmt2 -> fetch();
 	$stmt2 -> close();
 	
-	//@$orgSearchStr: es wird der original Suchstring übergeben, weil die %-Zeichen in $searchStr führen zu einem falschen übergebenen String mit Get!
-	
-	if($cntResults == 7)
-		$content .= '<div class="hiddenRes">';
-	
 	if($numberOfArticles > 0)
-		$content .= '<li id="searchResultListNavigation">
+		$content .= '<li class="searchResultListNavigation">
 						<a href="productList.php?cid='.$categoryID.'&sstr='.$orgSearchStr.'">'.utf8_encode($categoryName).' ('.$numberOfArticles.')</a>
 					</li>';
 }
@@ -70,8 +65,8 @@ while($stmt -> fetch())
 if($content == '<ul>')
 	$content .= 'Kein Ergebnis für diese Suchanfrage gefunden</ul>';
 	
-else if($cntResults > 6)
-	$content .= '</div></ul><a href="#" id="showMore">zeige mehr</a>';
+else if($cntResults > 10)
+	$content .= '</div><li class="searchResultListNavigationLast" id="showMoreResults">zeige mehr</li></ul>';
 
 else
 	$content .= '</ul>';

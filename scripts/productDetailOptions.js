@@ -11,7 +11,6 @@ $(document).ready(function() {
                 else 
                 { 
                     $(this).css("background-image", "url(images/productDetailNavigationBackgroundOpen.png), url(images/productDetailNavigationBackground.png)");
-                    
                 }    
             });  
         
