@@ -6,13 +6,7 @@
 #productDetailNavigation span, #productDetailHeader span 
 {
 	float: left;
-	/*
-	width: 298px;
-	*/
 	margin: 0 0 -1px 0;
-	/*
-	padding: 20px;
-	*/
 	background-color: #fff;
 	border-left: 1px solid #dedede;
 	border-right: 1px solid #dedede;
@@ -26,10 +20,6 @@
 
 #productDetailNavigation p 
 {
-	/*
-	margin: 0;
-	padding: 0;
-	*/
 	width: 258px;
 }
 

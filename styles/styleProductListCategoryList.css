@@ -1,5 +1,5 @@
 
-#productListNavigation, #categoryListNavigation, #searchResultListNavigation
+#productListNavigation, #categoryListNavigation, .searchResultListNavigation, .searchResultListNavigationLast
 {
 	width: 290px;
 	height: 30px;
