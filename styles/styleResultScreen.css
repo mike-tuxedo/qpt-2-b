@@ -26,10 +26,3 @@
     right: 10px;
     top: 17px;
 }
-.hiddenRes
-{
-    transition: opacity 1s;
-    -moz-transition: opacity 1s; /* Firefox 4 */
-    -webkit-transition: opacity 1s; /* Safari and Chrome */
-    -o-transition: opacity 1s; /* Opera */
-}
