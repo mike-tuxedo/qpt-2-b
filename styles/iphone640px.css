@@ -113,8 +113,6 @@
 	    height: 20px;
 	    font-size: 14px;
 	    padding: 5px;
-	    float: left;
-
 	}
 	
 	form #submit{
@@ -122,6 +120,7 @@
         height: 32px;
         background: url('../images/search.png') 0 0 no-repeat;
         border: solid 1px #acacac;
+        float: right;
     }
 
     /* Login and SignUp specials*/
@@ -132,11 +131,13 @@
         margin-top: 10px;   
     }
 
-    #loginButton, #signupButton
+    #loginButton, #signupButton, #barcodeScanner, #loginButton, #settingsButton
     {
         height: 32px;
         background: #bade11;
         border: solid 1px #acacac;
+        width: 270px;
+        text-align: center;
     }
     
     /*

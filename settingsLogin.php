@@ -22,7 +22,7 @@ $content .= '
 			</li>
 			<li>
 				<label>Passwort</label>
-				<input id="password" name="password" type="password" placeholder="password"/>
+				<input id="password" name="password" type="password" placeholder="Passwort"/>
 			</li>
 			<li>
 				<input id="loginButton" type="submit" name="login" value="Login" />

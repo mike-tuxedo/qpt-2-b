@@ -16,15 +16,15 @@ else
 $content .= '<form id="signUp" action="signup.php" method="POST">
 				<ul>
 					<li>
-						<lable for="nickname">Name</lable>
+						<label for="nickname">Name</label><br/>
 						<input id="nickname" type="text" name="nickname" autofocus placeholder="Max"/>
 					</li>
 					<li>
-						<lable for="email">eMail</lable>
+						<label for="email">eMail</label><br/>
 						<input id="email" type="email" name="email" placeholder="max.muster@gmail.com"/>
 					</li>
 					<li>
-						<lable for="password">Passwort</lable>
+						<label for="password">Passwort</label><br/>
 						<input id="password" type="password" name="password" placeholder="Passwort"/>
 					</li>
 					<li>

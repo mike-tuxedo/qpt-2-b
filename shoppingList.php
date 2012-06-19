@@ -34,9 +34,9 @@ if($_SESSION['USER'])
 else
 	//give response to the user the he/she has to bo registrated and logged in for a basket
 	$content .= '<p>Du musst dich einloggen um eine Einkaufliste zu erstellen:</p>
-				<p><a href="settingsLogin.php">zum Login</a></p>
+				<p><a href="settingsLogin.php"><button id="loginButton" />Zum Login</button></a></p>
 				<p>Du bist neu hier, dann registrier dich doch ganz einfach bei uns:</p>
-				<p><a href="settingsSignup.php">zum Registrieren</a></p>';
+				<p><a href="settingsSignup.php"><button id="settingsButton" />Zum Registrieren</button></a></p>';
 
 include 'footer.php';
 

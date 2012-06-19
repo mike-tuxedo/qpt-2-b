@@ -112,6 +112,7 @@ $(document).ready(function() {
     $(".showSettings").click(function() {
         var opacity = $("#contentArea").css('opacity');
         if(opacity == 1) {
+            $("#settings").css("margin-bottom", 130 + "px");
             $("#contentArea").fadeTo("slow", 0.2);
 
             $("#contentArea a").css("cursor", "default");
@@ -122,6 +123,7 @@ $(document).ready(function() {
             });
         }    
         else {
+        		$("#settings").css("margin-bottom", null);
             $("#contentArea").fadeTo("slow", 1);
 
             $("#contentArea a").css("cursor", "auto");

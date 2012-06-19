@@ -4,7 +4,7 @@
 if(preg_match('/.php/i', $_SERVER['REQUEST_URI']))
     $navigationHeader = '<ul><li id="back"><a id="link_back" href="javascript:history.back()"><img src="images/back.png" alt="back" /></a></li>';
 else
-    $navigationHeader = '<ul><li id="back"><img src="images/back.png" alt="back" /></li>';
+    $navigationHeader = '<ul><li id="back"><img src="images/back_inactive.png" alt="back" /></li>';
 
 $navigationHeader .= '
                 <li><a href="./"><img id="logo" src="images/logo.png" /></a></li>
