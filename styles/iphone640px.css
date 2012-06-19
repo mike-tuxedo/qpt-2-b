@@ -65,6 +65,7 @@
         font-family: 'QuorumStdBook';
         font-size: 14px;
         color: #777;
+        margin-top: 50px;
     }
     
     /*
@@ -113,6 +114,7 @@
 	    height: 20px;
 	    font-size: 14px;
 	    padding: 5px;
+	    float: left;
 	}
 	
 	form #submit{
@@ -120,6 +122,7 @@
         height: 32px;
         background: url('../images/search.png') 0 0 no-repeat;
         border: solid 1px #acacac;
+        float: left;
     }
 
     /* Login and SignUp specials*/
